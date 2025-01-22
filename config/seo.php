@@ -11,7 +11,7 @@ return [
   |
   */
 
-  'title' => 'Venez vivre l’expérience «Creative Factory»',
+  'title' => 'Werkwinkel – Innovativ und zukunftsorientiert',
 
   /*
   |--------------------------------------------------------------------------
@@ -22,6 +22,6 @@ return [
   |
   */
 
-  'description' => 'Proche de la gare, à la rue du Chêne 5 à Renens, des appartements modernes de 1,5 à 7,5 pièces ainsi que des lofts et des surfaces commerciales seront disponibles à la location dès le 1er septembre 2025.',   
+  'description' => 'Am 20. Januar 2025 startet der Bau des Innovationsparks «Werkwinkel» in Wolfhausen ZH. Das Projekt der consqwnt AG umfasst 1.400 m² Gewerbe- und 600 m² Büroflächen in modularer Bauweise für Start-ups und zukunftsorientierte Unternehmen.',   
 
 ];
