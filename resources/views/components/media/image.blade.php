@@ -25,7 +25,6 @@
       title="{{ $alt }}" 
       height="{{ $width }}" 
       width="{{ $height }}"
-      class="block w-full h-auto"
-      loading="lazy">
+      class="block w-full h-auto">
   </picture>
 </figure>
