@@ -1,7 +1,7 @@
 @if (!Route::is('page.privacy') && !Route::is('page.imprint'))
-<x-layout.section class="relative !p-0">
+{{-- <x-layout.section class="relative !p-0">
   <x-misc.map />
-</x-layout.section>
+</x-layout.section> --}}
 @endif
 <footer>
   <div class="bg-white text-sm py-5 md:py-10 px-15 md:px-25">
