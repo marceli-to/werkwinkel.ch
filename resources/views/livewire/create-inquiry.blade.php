@@ -91,7 +91,7 @@
         <div wire:loading>
           <x-form.spinner class="mr-12 text-olive" />
         </div>
-        Senden
+        Absenden
       </x-form.button>
     </x-layout.span>
   </x-layout.grid>

@@ -28,7 +28,7 @@ h2 {
 }
 
 h3 {
-  @apply uppercase text-base md:text-md mb-5
+  @apply uppercase text-md lg:text-lg mb-5
 }
 
 .imprint h1,

@@ -3,7 +3,7 @@ const initMap = () => {
   var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/marcelitoooo/ck16ms7m51nlo1cmwnqrbjuyq?optimize=true',
-      center: [8.583209803026746, 47.40314138082128], 
+      center: [8.799862179703089, 47.25841286180372],
       zoom: 14
   });
   map.addControl(new mapboxgl.NavigationControl());
@@ -15,7 +15,7 @@ const initMap = () => {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [8.583209803026746, 47.40314138082128]
+        coordinates: [8.799862179703089, 47.25841286180372]
       },
       properties: {
         title: 'Glattwiesen-/Grosswiesenstrasse',
