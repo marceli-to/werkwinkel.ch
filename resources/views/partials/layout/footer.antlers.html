@@ -1,0 +1,10 @@
+{{ if show_maps }}
+  {{ partial:misc/map zoom="{{ slug == 'lage' ? '15' : '13' }}" }}
+{{ /if }}
+<footer>
+
+</footer>
+{{ vite src="resources/js/app.js" }}
+{{ livewire:scripts }}
+</body>
+</html>
