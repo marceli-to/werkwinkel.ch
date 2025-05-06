@@ -2,77 +2,79 @@
   
   {{ partial:layout/inner }}
 
-    {{ partial:layout/grid }}
+    <h1>
+      Sind sie<br>
+      <em>interessiert?</em>
+    </h1>
 
-      {{ partial:layout/span }}
+    <p>Gerne senden wir Ihnen weitere Informationen.<br>Bitte füllen Sie bei Interesse das Kontaktformular aus.</p>
+    <div class="my-25 lg:my-35">
+      <h2>Ich interessiere mich für (Bitte auswählen):</h2>
+      {{ nocache }}
+        {{ form:contact_form class="mt-10 md:mt-15 lg:mt-25" }}
 
-        <h1 class="text-white">Kontaktformular</h1>
+          {{ if errors }}
+            {{ partial:components/forms/elements/errors }}
+          {{ /if }}
+        
+          {{ if success }}
+            {{ partial:components/forms/elements/success }}
+              Vielen Dank für Ihre Anfrage.
+            {{ /partial:components/forms/elements/success }}
+          {{ /if }}
 
-        <h3 class="text-white mb-10">Herzlichen Dank für Ihr Interesse</h3>
+          {{ partial:layout/grid class="sm:gap-20 lg:!gap-30" }}
 
-        <p>Gerne stehen wir für Fragen zur Verfügung und freuen uns auf Ihre Kontaktaufnahme.</p>
+            {{ partial:layout/span class="!col-span-full flex gap-x-30 md:gap-x-60 lg:gap-x-90" }}
+              {{ partial:components/forms/elements/checkbox field="interest_commercial" id="interest_commercial" value="{{ old:interest_commercial }}" error="{{ error:interest_commercial ? true : false }}" }}
+                <span>Gewerbeflächen</span>
+              {{ /partial:components/forms/elements/checkbox }}
+              
+              {{ partial:components/forms/elements/checkbox field="interest_office" id="interest_office" value="{{ old:interest_office }}" error="{{ error:interest_office ? true : false }}" }}
+                <span>Büroflächen</span>
+              {{ /partial:components/forms/elements/checkbox }}
 
-      {{ /partial:layout/span }}
+            {{ /partial:layout/span }}
 
-    {{ /partial:layout/grid }}
+            {{ partial:layout/span }}
+              {{ partial:components/forms/elements/field field="company" placeholder="Firma*" value="{{ old:company }}" error="{{ error:company ? true : false }}" }}
+            {{ /partial:layout/span }}
 
-    {{ nocache }}
-    {{ form:contact_form class="mt-20 md:mt-40 max-w-5xl" }}
+            {{ partial:layout/span }}
+              {{ partial:components/forms/elements/field field="contact_person" placeholder="Kontaktperson*" value="{{ old:contact_person }}" error="{{ error:contact_person ? true : false }}" }}
+            {{ /partial:layout/span }}
 
-      {{ if errors }}
-        {{ partial:components/forms/elements/errors }}
-      {{ /if }}
-    
-      {{ if success }}
-        {{ partial:components/forms/elements/success }}
-          Vielen Dank für Ihre Anfrage.
-        {{ /partial:components/forms/elements/success }}
-      {{ /if }}
+            {{ partial:layout/span }}
+              {{ partial:components/forms/elements/field field="street_number" placeholder="Strasse/Nr.*" value="{{ old:street_number }}" error="{{ error:street_number ? true : false }}"}}
+            {{ /partial:layout/span }}
 
-      <input type="text" name="webs1te" class="hidden" />
-      {{ partial:layout/grid class="sm:gap-16 lg:!gap-24" }}
-        {{ partial:layout/span }}
-          {{ partial:components/forms/elements/field field="firstname" placeholder="Vorname*" value="{{ old:firstname }}" error="{{ error:firstname ? true : false }}" }}
-        {{ /partial:layout/span }}
+            {{ partial:layout/span }}
+              {{ partial:components/forms/elements/field field="location" placeholder="PLZ/Ort*" value="{{ old:location }}" error="{{ error:location ? true : false }}" }}
+            {{ /partial:layout/span }}
 
-        {{ partial:layout/span }}
-          {{ partial:components/forms/elements/field field="name" placeholder="Name*" value="{{ old:name }}" error="{{ error:name ? true : false }}" }}
-        {{ /partial:layout/span }}
+            {{ partial:layout/span }}
+              {{ partial:components/forms/elements/field type="email" field="email" placeholder="E-Mail*" value="{{ old:email }}" error="{{ error:email ? true : false }}" }}
+            {{ /partial:layout/span }}
 
-        {{ partial:layout/span }}
-          {{ partial:components/forms/elements/field field="street_number" placeholder="Strasse/Nr.*" value="{{ old:street_number }}" error="{{ error:street_number ? true : false }}"}}
-        {{ /partial:layout/span }}
+            {{ partial:layout/span }}
+              {{ partial:components/forms/elements/field field="phone" placeholder="Telefon" }}
+            {{ /partial:layout/span }}
 
-        {{ partial:layout/span }}
-          {{ partial:components/forms/elements/field field="location" placeholder="PLZ/Ort*" value="{{ old:location }}" error="{{ error:location ? true : false }}" }}
-        {{ /partial:layout/span }}
+            {{ partial:layout/span class="!col-span-full mb-25 md:mb-10" }}
+              {{ partial:components/forms/elements/checkbox field="privacy" id="privacy" value="{{ old:privacy }}" error="{{ error:privacy ? true : false }}" }}
+                <span>Ich habe die <a href="/datenschutz" target="_blank" class="inline-block mx-4 underline underline-offset-4 decoration-1 hover:no-underline">Datenschutzerklärung</a> gelesen und akzeptiere diese</span>
+              {{ /partial:components/forms/elements/checkbox }}
+            {{ /partial:layout/span }}
 
-        {{ partial:layout/span }}
-          {{ partial:components/forms/elements/field type="email" field="email" placeholder="E-Mail*" value="{{ old:email }}" error="{{ error:email ? true : false }}" }}
-        {{ /partial:layout/span }}
+            {{ partial:layout/span }}
+              {{ partial:components/forms/elements/button label="Absenden" }}
+            {{ /partial:layout/span }}
 
-        {{ partial:layout/span }}
-          {{ partial:components/forms/elements/field field="phone" placeholder="Telefon" }}
-        {{ /partial:layout/span }}
-
-        {{ partial:layout/span class="!col-span-full" }}
-          {{ partial:components/forms/elements/textarea field="message" placeholder="Nachricht*" }}
-        {{ /partial:layout/span }}
-
-        {{ partial:layout/span class="!col-span-full mb-25 md:mb-10" }}
-          {{ partial:components/forms/elements/checkbox field="privacy" id="privacy" value="{{ old:privacy }}" error="{{ error:privacy ? true : false }}" }}
-        {{ /partial:layout/span }}
-
-        {{ partial:layout/span }}
-          {{ partial:components/forms/elements/button label="Absenden" }}
-        {{ /partial:layout/span }}
-
-      {{ /partial:layout/grid }}
-    
-    
-    {{ /form:contact_form }}
-    {{ /nocache }}
-
+          {{ /partial:layout/grid }}
+              
+        {{ /form:contact_form }}
+      {{ /nocache }}
+    </div>
   {{ /partial:layout/inner }}
 
 {{ /partial:layout/section }}

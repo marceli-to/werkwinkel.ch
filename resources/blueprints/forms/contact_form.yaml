@@ -5,78 +5,51 @@ tabs:
       -
         fields:
           -
-            handle: firstname
+            handle: interest_commercial
             field:
-              input_type: text
-              antlers: false
+              type: toggle
+              display: Gewerbeflächen
+              width: 50
+          -
+            handle: interest_office
+            field:
+              type: toggle
+              display: Büroflächen
+              width: 50
+          -
+            handle: company
+            field:
               type: text
-              display: Vorname
-              icon: text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
+              display: Firma
               validate:
                 - required
           -
-            handle: name
+            handle: contact_person
             field:
-              input_type: text
-              antlers: false
               type: text
-              display: Name
-              icon: text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
+              display: Kontaktperson
               validate:
                 - required
           -
             handle: street_number
             field:
-              input_type: text
-              antlers: false
               type: text
               display: Strasse/Nr.
-              icon: text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
               validate:
                 - required
           -
             handle: location
             field:
-              input_type: text
-              antlers: false
               type: text
               display: PLZ/Ort
-              icon: text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
               validate:
                 - required
           -
             handle: email
             field:
               input_type: email
-              antlers: false
               type: text
               display: E-Mail
-              icon: text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
               validate:
                 - required
                 - email
@@ -84,38 +57,12 @@ tabs:
             handle: phone
             field:
               input_type: tel
-              antlers: false
               type: text
               display: Telefon
-              icon: text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: message
-            field:
-              antlers: false
-              type: textarea
-              display: Nachricht
-              icon: textarea
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
           -
             handle: privacy
             field:
-              default: false
               type: toggle
               display: Privacy
-              icon: toggle
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
               validate:
                 - accepted

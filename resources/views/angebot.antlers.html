@@ -6,8 +6,15 @@
     width="1024" 
     height="460" }}
 
-  {{ partial:layout/inner }}
-   
+  {{ partial:layout/inner class="relative" }}
+    <a 
+      href="https://werkwinkel.designraum.ch" 
+      title="3D-Ansicht"
+      target="_blank"
+      class="block absolute top-0 -translate-y-[70%] md:-translate-y-1/2 right-15 md:right-0 size-90 md:size-154">
+      {{ partial:icons/splash-3d class="block w-full h-auto" }}
+    </a>
+
     <h1>
       Sie haben die Idee – <br>
       <em>Wir die passende Fläche!</em>
@@ -18,7 +25,7 @@
       <p>Im Erdgeschoss steht ein hochwertig ausgebauter Aufenthaltsraum mit integrierter Gemeinschaftsküche zur Verfügung, der als Begegnungs- und Pausenraum genutzt werden kann. Ergänzt wird die Infrastruktur durch ein grosszügiges Parkplatzangebot sowie einen überdachten Velounterstand.</p>
     {{ /partial:layout/article }}
 
-    <div class="mt-15 md:mt-25 lg:mt-35 max-w-3xl">
+    <div class="mt-25 lg:mt-35 max-w-3xl">
       <a 
         href="https://werkwinkel.designraum.ch" 
         title="3D-Ansicht"
@@ -36,8 +43,7 @@
       </a>
     </div>
 
-
-    <div class="w-full flex flex-col gap-y-10 sm:flex-row sm:gap-y-0 sm:gap-x-10 md:gap-x-15 lg:gap-x-20 mt-15 md:mt-25 lg:mt-35">
+    <div class="w-full flex flex-col gap-y-15 sm:flex-row sm:gap-y-0 sm:gap-x-10 md:gap-x-15 lg:gap-x-20 mt-25 lg:mt-35">
       <div class="bg-beige text-white w-full p-10 lg:p-15">
         <h3 class="mb-5">Infrastruktur</h3>
         <ul>
@@ -56,6 +62,70 @@
           <li>Grundinstallation Sanitär</li>
         </ul>
       </div>
+    </div>
+
+    <div class="mt-25 lg:mt-35">
+      <h3 class="text-beige">Objektübersicht</h3>
+      <table class="w-full max-w-2xl mt-10 lg:mt-15 text-sm md:text-base">
+        <thead class="border-b border-black">
+          <th class="text-left md:pr-20">
+            <span class="block sm:hidden">Nummer</span>
+            <span class="hidden sm:block">Objektnummer</span>
+          </th>
+          <th class="text-left md:pr-20">
+            <span class="block sm:hidden">Art</span>
+            <span class="hidden sm:block">Objektart</span>
+          </th>
+          <th class="text-left md:pr-20">Etage</th>
+          <th class="text-left md:pr-20">
+            <span class="block sm:hidden">Fläche</span>
+            <span class="hidden sm:block">Fläche in m<sup>2</sup></span>
+          </th>
+          <th class="text-center md:pr-20">
+            <span class="block sm:hidden">Pläne</span>
+            <span class="hidden sm:block">Grundrisse</span>
+          </th>
+          <th class="text-right">Anmeldung</th>
+        </thead>
+        <tbody>
+          {{ collection from="objects" as="objects" }}
+            {{ objects }}
+              <tr class="even:bg-almond">
+                <td class="py-5 md:py-7 md:pr-20">{{ number }}</td>
+                <td class="md:pr-20">{{ type }}</td>
+                <td class="uppercase md:pr-20">{{ floor }}</td>
+                <td class="md:pr-20">{{ space }}</td>
+                <td class="text-center md:pr-20">
+                  <a 
+                    href="/assets/downloads/werkwinkel-grundrisse-{{ number }}.pdf"
+                    target="_blank"
+                    title="Download Grundrisse">
+                    <span class="font-bold">&darr;</span>
+                  </a>
+                </td>
+                <td class="text-right">
+                  {{ if state == "available" }}
+                  <a 
+                    href="{{ form_url }}" 
+                    title="Anmeldung" 
+                    target="_blank"
+                    class="inline-flex items-center gap-x-10 bg-beige hover:bg-almond hover:text-beige text-sm md:text-sm text-white tracking-wide uppercase font-extrabold leading-none p-3 md:p-5 rounded-xs">
+                    Bewerben
+                  </a>
+                  {{ /if }}
+                  {{ if state == 'reserved' }}
+                    <span class="text-sm md:text-sm uppercase">reserviert</span>
+                  {{ /if }}
+                  {{ if state == 'rented' }}
+                    <span class="text-sm md:text-sm uppercase">vermietet</span>
+                  {{ /if }}
+                </td>
+              </tr>
+            {{ /objects }}
+          {{ /collection }}
+        </tbody>
+      </table>
+      <p class="text-sm mt-10 lg:mt-20">Preise auf Anfrage</p>
     </div>
 
 
