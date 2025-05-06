@@ -1,7 +1,64 @@
 {{ partial:layout/section }}
   
+  {{ partial:components/media/visual 
+    image="werkwinkel-visual-angebot" 
+    alt="Werkwinkel" 
+    width="1024" 
+    height="460" }}
+
   {{ partial:layout/inner }}
    
+    <h1>
+      Sie haben die Idee – <br>
+      <em>Wir die passende Fläche!</em>
+    </h1>
+
+    {{ partial:layout/article }}
+      <p>Dank einem innovativen, modularen Konzept bietet der Werkwinkel nicht nur Platz, sondern auch maximale Gestaltungsfreiheit. Das durchdachte Volumen des Gebäudes schafft vielseitige Nutzungsmöglichkeiten. Das Angebot bietet Ihnen attraktive Büroflächen bis 600m² und eine Gewerbehalle mit einem variablen Flächenangebot. Wählen Sie bis rund 1’100m² Produktionsfläche, welche Sie dank dem modularen Konzept auf drei Ebene maximieren können.</p>
+      <p>Im Erdgeschoss steht ein hochwertig ausgebauter Aufenthaltsraum mit integrierter Gemeinschaftsküche zur Verfügung, der als Begegnungs- und Pausenraum genutzt werden kann. Ergänzt wird die Infrastruktur durch ein grosszügiges Parkplatzangebot sowie einen überdachten Velounterstand.</p>
+    {{ /partial:layout/article }}
+
+    <div class="mt-15 md:mt-25 lg:mt-35 max-w-3xl">
+      <a 
+        href="https://werkwinkel.designraum.ch" 
+        title="3D-Ansicht"
+        target="_blank"
+        class="relative group">
+        <span class="absolute inset-0 bg-beige/60 group-hover:bg-transparent transition-all uppercase font-extrabold text-white p-10 lg:p-20 text-md md:text-lg lg:text-xl leading-[1.1]">
+          3D-Ansicht
+        </span>
+        {{ partial:icons/link-external class="absolute top-1/2 -translate-y-1/2 right-1/2 -translate-x-1/2 text-white" }}
+        {{ partial:components/media/image 
+          image="werkwinkel-3d-ansicht" 
+          alt="Werkwinkel" 
+          width="900" 
+          height="662" }}
+      </a>
+    </div>
+
+
+    <div class="w-full flex flex-col gap-y-10 sm:flex-row sm:gap-y-0 sm:gap-x-10 md:gap-x-15 lg:gap-x-20 mt-15 md:mt-25 lg:mt-35">
+      <div class="bg-beige text-white w-full p-10 lg:p-15">
+        <h3 class="mb-5">Infrastruktur</h3>
+        <ul>
+          <li>Attraktiver, offener Grundriss mit ausgebauter Teeküche, helle Räumlichkeiten</li>
+          <li>hochwertige Materialisierung im Grundausbau (Boden Parkett, Wände Abrieb, Decke Beton roh, Fensterfront mit 3-fach Isolierverglasung, Lamellenstoren elektronisch bedienbar)</li>
+          <li>Innovativer Standort mit nachhaltiger, energieschonender Bauweise</li>
+        </ul>
+      </div>
+      <div class="bg-almond text-black w-full p-10 lg:p-15">
+        <h3 class="mb-5 text-beige">Zahlen und Fakten</h3>
+        <ul>
+          <li>Nutzlast bis zu 2’500kg/m²</li>
+          <li>8.30 m Deckenhöhe vom Boden bis zur konstruktiven Deckenhöhe, davon unterteilbar mittels Einlageböden auf bis zu 3 Ebenen</li>
+          <li>Möglichkeit für Installation einer Krananlage</li>
+          <li>Direkte Zugangsmöglichkeiten zu Bürotrakt</li>
+          <li>Grundinstallation Sanitär</li>
+        </ul>
+      </div>
+    </div>
+
+
   {{ /partial:layout/inner }}
 
 {{ /partial:layout/section }}

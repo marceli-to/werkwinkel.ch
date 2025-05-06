@@ -1,7 +1,39 @@
 {{ partial:layout/section }}
   
+{{ partial:components/media/visual 
+  image="werkwinkel-visual-projekt" 
+  alt="Werkwinkel" 
+  width="1024" 
+  height="460" }}
+
   {{ partial:layout/inner }}
    
+    <h1>
+      Nachhaltigkeit trifft<br>
+      <em>Charakter</em>
+    </h1>
+
+    {{ partial:layout/article }}
+      <p>Die nachhaltige Holzbaukonstruktion mit ihrer prägnanten Lärchenschindelfassade, sichtbaren V-Trägern und Betonsockeln bildet ein architektonisches Bindeglied zwischen Industrie- und Wohnquartier. Sie verleiht dem Gebäude eine starke Identität und unterstreicht zugleich dessen repräsentativen Anspruch als sichtbares Aushängeschild für die zukünftigen Mieterinnen und Mieter.</p>
+      
+      <div class="my-15 md:my-25 lg:my-35">
+        <a
+         href="/assets/downloads/werkwinkel-kurzbaubeschrieb.pdf"
+         title="Kurzbaubeschrieb"
+         target="_blank"
+         class="inline-flex items-center gap-x-10 bg-beige hover:bg-almond hover:text-beige transition-all text-white text-md md:text-lg tracking-wide uppercase font-extrabold leading-none px-20 py-10 rounded-sm">
+         Kurzbaubeschrieb
+        </a>
+      </div>
+
+      {{ partial:components/media/image 
+        image="werkwinkel-installation" 
+        alt="Werkwinkel Installation" 
+        width="1280" 
+        height="419" }}
+
+    {{ /partial:layout/article }}
+
   {{ /partial:layout/inner }}
 
 {{ /partial:layout/section }}

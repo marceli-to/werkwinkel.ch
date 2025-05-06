@@ -4,9 +4,12 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 export default {
   
   content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
-    "./resources/**/*.vue",
+    './resources/**/*.antlers.html',
+    './resources/**/*.antlers.php',
+    './resources/**/*.blade.php',
+    './resources/**/*.vue',
+    './resources/**/*.js',
+    './content/**/*.md'
   ],
   
   theme: {
@@ -30,8 +33,9 @@ export default {
         'base': '1rem', // 16px
         'md': '1.125rem', // 18px
         'lg': '1.25rem', // 20px
-        'xl': '2rem', // 32px
-        '2xl': '2.75rem', // 44px
+        'xl': '1.5rem', // 24px
+        '2xl': '2rem', // 32px
+        '3xl': '2.75rem', // 44px
       },
 
     },

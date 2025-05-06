@@ -1,7 +1,50 @@
 {{ partial:layout/section }}
   
+  {{ partial:components/media/visual 
+    image="werkwinkel-visual-lage" 
+    alt="Werkwinkel" 
+    width="1024" 
+    height="460" }}
+
   {{ partial:layout/inner }}
    
+  <h1>
+    Naturnah<br>
+    <em>und bestens vernetzt</em>
+  </h1>
+
+  {{ partial:layout/article }}
+    <p><strong>Die Ortschaft Wolfhausen zählt zur Gemeinde Bubikon und liegt eingebettet in die sanfte Hügellandschaft des Zürcher Oberlands. Sie verbindet ländliche Idylle mit einer hervorragenden Anbindung an die Zentren Zürich, Rapperswil und Winterthur.</strong></p>
+    <p>Dank moderner Infrastruktur, einem aktiven Gemeindeleben und der Nähe zu Naherholungsgebieten ist Bubikon ein attraktiver Wohn- und Arbeitsort – ruhig, naturnah und dennoch bestens vernetzt. Ob Familien, Unternehmen oder Pendler – hier finden alle den passenden Platz zum Leben und Wirken.</p>
+    <h2>Öffentlicher Verkehr</h2>
+    <p>Bubikon ist ein zentraler Umsteigeort des Zürcher Verkehrsverbundes ZVV von den Bahnlinien S5 und S15 auf die verschiedenen Buslinien der VZO. Im Viertelstundentakt verkehren die Züge und Busse. In nur 25 Minuten erreichen Sie bequem mit dem Zug das Zentrum von Zürich und bis zum Flughafen Zürich-Kloten sind es rund 40 Minuten. In Rapperswil gibt es halbstündlich einen Anschluss mit dem Voralpenexpress nach St.Gallen oder Luzern und in Pfäffikon SZ jede Stunde einen solchen nach Chur.</p>
+    <p>Die verschiedenen lokalen Buslinien fahren ab Bahnhof Bubikon nach Rüti, Dürnten, Hombrechtikon, Ottikon respektive Wetzikon. Die Linien sind sehr gut frequentiert und bestätigen somit das Bedürfnis der Bevölkerung nach schnellen Verbindungen im öffentlichen Verkehr. Nachtschwärmer, welche sich am Wochenende in Zürich vergnügen wollen, können bis in die frühen Morgenstunden bequem mit dem Zug heimkehren.</p>
+    <h2>Individualverkehr</h2>
+    <p>Mit dem Auto sind Sie rasch beim Autobahnanschluss Bubikon und damit auf der Oberlandautobahn. In östlicher Richtung besteht eine direkte Verbindung zur A3 Zürich-Chur. In westlicher Richtung können Sie über den Autobahnkreisel Betzholz via Forchstrasse A52 nach Zürich oder über das Hauptstrassennetz Hinwil-Wetzikon-Uster zur Fortsetzung der Oberlandautobahn nach Zürich oder Winterthur fahren.</p>
+  {{ /partial:layout/article }}
+
+  <div class="flex flex-col gap-y-10 sm:flex-row sm:gap-y-0 sm:gap-x-10 md:gap-x-15 lg:gap-x-20 max-w-4xl mt-15 md:mt-25 lg:mt-35">
+    <div class="bg-beige text-white w-full p-10 lg:p-15">
+      <h3 class="mb-5">Infrastruktur</h3>
+      <ul>
+        <li><strong>Einkaufen:</strong> 400m</li>
+        <li><strong>Post:</strong> 450m</li>
+        <li><strong>Bankomat:</strong> 400m</li>
+      </ul>
+    </div>
+    <div class="bg-almond text-black w-full p-10 lg:p-15">
+      <h3 class="mb-5 text-beige">Zahlen und Fakten</h3>
+      <ul>
+        <li><strong>Einwohner:</strong> 7'622 (Stand 31.12.2024)</li>
+        <li><strong>Fläche:</strong> 1'164ha</li>
+        <li><strong>Luftdistanz zu Zürich:</strong> 24km</li>
+        <li><strong>Verkehr:</strong> 8%</li>
+        <li><strong>Siedlungen:</strong> 13%</li>
+        <li><strong>Steuersatz:</strong> 118% (Kanton ZH: 89%)</li>
+      </ul>
+    </div>
+  </div>
+
   {{ /partial:layout/inner }}
 
 {{ /partial:layout/section }}

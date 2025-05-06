@@ -1,8 +1,39 @@
-{{ if show_maps }}
-  {{ partial:misc/map zoom="{{ slug == 'lage' ? '15' : '13' }}" }}
-{{ /if }}
-<footer>
 
+<footer class="bg-almond">
+  {{ partial:layout/inner class="!py-10 md:!py-15 lg:!py-20" }}
+    <h3 class="text-beige mb-10 md:mb-15 lg:mb-20">
+      Ihr Ansprechpartner
+    </h3>
+    <div class="flex items-center gap-x-30 md:gap-x-40 lg:gap-x-50">
+      {{ partial:icons/logo-marketer class="w-150 lg:w-185" }}
+      <address class="not-italic text-sm md:text-base lg:mt-2">
+       <strong>Sanjo Management AG</strong><br>
+        Ziegelwies 2, 8852 Altendorf<br>
+        <a href="tel:+41 55 446 60 40" title="Rufen Sie uns an" class="hover:underline decoration-1 underline-offset-2">+41 55 446 60 40</a>,
+        <a href="mailto:info@sanjo.ch" title="Senden Sie uns eine E-Mail" class="hover:underline decoration-1 underline-offset-2">info@sanjo.ch</a>
+      </address>
+    </div>
+  {{ /partial:layout/inner }}
+  {{ if show_maps }}
+    {{ partial:misc/map zoom="{{ slug == 'lage' ? '15' : '13' }}" }}
+  {{ /if }}
+    <div class="bg-white">
+      {{ partial:layout/inner class="!py-5 md:!py-10 lg:!py-15" }}
+        <nav>
+          <ul class="flex gap-x-10 lg:gap-x-20 text-xs md:text-sm lg:text-base text-beige">
+            <li>
+              <a href="/impressum" title="Impressum" class="hover:underline decoration-1 underline-offset-2">Impressum</a>
+            </li>
+            <li>
+              <a href="/datenschutz" title="Datenschutz" class="hover:underline decoration-1 underline-offset-2">Datenschutz</a>
+            </li>
+            <li>
+              <a href="https://stoz.ch" target="_blank" title="design by stoz" class="hover:underline decoration-1 underline-offset-2">design by stoz</a>
+            </li>
+          </ul>
+        </nav>
+      {{ /partial:layout/inner }}
+    </div>
 </footer>
 {{ vite src="resources/js/app.js" }}
 {{ livewire:scripts }}

@@ -7,35 +7,40 @@
 @tailwind components;
 @tailwind utilities;
 
+[x-cloak] {
+  @apply hidden;
+}
+
 main {
   @apply flex-1;
 }
 
 h1, h2, h3 {
-  @apply font-extrabold text-beige
-}
-
-h1, h2 {
-  @apply uppercase text-xl lg:text-2xl leading-[1.15]
+  @apply font-extrabold uppercase
 }
 
 h1 {
-  @apply  mb-15 lg:mb-25
+  @apply text-lg md:text-2xl lg:text-3xl leading-[1.2] mb-15 lg:mb-25
+}
+
+h1 em {
+  @apply font-extrabold not-italic text-beige
 }
 
 h2 {
-  @apply text-lg lg:text-xl
-}
-
-h3 {
-  @apply uppercase text-md lg:text-lg mb-5
+  @apply text-beige mb-5 lg:mb-10 text-md md:text-lg
 }
 
 .imprint h1,
 .privacy h1,
 .imprint h2,
 .privacy h2 {
-  @apply mb-10
+  @apply mb-10 text-beige
+}
+
+.imprint h1,
+.privacy h1 {
+  @apply mb-10 md:mb-20 lg:mb-30
 }
 
 .privacy p {
@@ -55,7 +60,7 @@ strong {
 }
 
 main ul {
-  @apply m-0 p-0 mb-16 lg:mb-20;
+  @apply m-0 p-0 mb-16 lg:mb-20 list-none space-y-2 pl-0;
 }
 
 main ul:last-child {
@@ -63,7 +68,7 @@ main ul:last-child {
 }
 
 main ul li {
-  @apply list-item list-disc ml-20;
+  @apply relative pl-20 before:content-['–'] before:absolute before:font-bold before:left-0 before:top-0 before:text-inherit;
 }
 
 sub,

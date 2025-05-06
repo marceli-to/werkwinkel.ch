@@ -1,0 +1,67 @@
+{{ partial:layout/section }}
+
+  {{ partial:components/media/visual 
+    image="werkwinkel-visual-home" 
+    alt="Werkwinkel" 
+    width="1024" 
+    height="460" }}
+  
+  {{ partial:layout/inner }}
+  
+    <h1>
+      Gewerbehalle Werkwinkel<br>
+      <em>Büro- und Gewerbefläche<br>für jedes Bedürfnis</em>
+    </h1>
+
+    {{ partial:layout/article }}
+      <p>Das innovative Neubauprojekt befindet sich in einem zentralen Wohn- und Gewerbeareal von Wolfhausen in der Gemeinde Bubikon. Auf rund 3’000m<sup>2</sup> entsteht ein innovativer Hub für Kreativität und Austausch.</p>
+    {{ /partial:layout/article }}
+
+    <div class="mt-15 md:mt-25 lg:mt-35 flex flex-col xs:flex-row gap-y-10 xs:gap-y-0 xs:gap-x-10 md:gap-x-15 lg:gap-x-20">
+
+      <a 
+        href="/projekt" 
+        title="Projekt"
+        class="relative group">
+        <span class="absolute inset-0 bg-beige/60 group-hover:bg-transparent transition-all group-hover:text-black uppercase font-extrabold text-white p-10 lg:p-20 text-md md:text-lg lg:text-xl leading-[1.1]">
+          Projekt mit<br>Charakter
+        </span>
+        {{ partial:components/media/image 
+          image="werkwinkel-projekt-mit-charakter" 
+          alt="Werkwinkel" 
+          width="900" 
+          height="662" }}
+      </a>
+
+      <a 
+        href="/angebot" 
+        title="Angebot"
+        class="relative group">
+        <span class="absolute inset-0 bg-beige/60 group-hover:bg-transparent group-hover:bg-opacity-0 transition-all group-hover:text-black uppercase font-extrabold text-white p-10 lg:p-20 text-md md:text-lg lg:text-xl leading-[1.1]">
+          Attraktive<br>Flächen
+        </span>
+        {{ partial:components/media/image 
+          image="werkwinkel-attraktive-flaechen" 
+          alt="Werkwinkel" 
+          width="900" 
+          height="662" }}
+      </a>
+
+      <a 
+        href="/lage" 
+        title="Lage"
+        class="relative group">
+        <span class="absolute inset-0 bg-beige/60 group-hover:bg-transparent group-hover:bg-opacity-0 transition-all group-hover:text-black uppercase font-extrabold text-white p-10 lg:p-20 text-md md:text-lg lg:text-xl leading-[1.1]">
+          Naturnah und<br>vernetzt
+        </span>
+        {{ partial:components/media/image 
+          image="werkwinkel-naturnah-und-vernetzt" 
+          alt="Werkwinkel" 
+          width="900" 
+          height="662" }}
+      </a>
+    </div>
+   
+  {{ /partial:layout/inner }}
+
+{{ /partial:layout/section }}

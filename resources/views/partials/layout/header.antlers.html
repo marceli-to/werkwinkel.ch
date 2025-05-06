@@ -1,15 +1,15 @@
 <header 
-  class="bg-red-500"
+  class="bg-almond"
   :class="{ '!shadow-none': menu === true }">
   <div 
-    :class="{ '!h-[320px] shadow-md': menu === true }"
-    class="max-w-7xl mx-auto w-full bg-white h-full md:!h-120 md:!shadow-none flex justify-between items-start md:items-center px-15 pt-20 md:pt-0">
+    :class="{ 'shadow-md': menu === true }"
+    class="max-w-6xl mx-auto px-10 xl:px-15 py-15 xl:py-25 w-full h-full md:h-auto md:!shadow-none flex justify-between items-start md:items-end">
     <a 
       href="javascript:;" 
       x-on:click="menu = ! menu" 
       title="{{ "Menü anzeigen" | trans }}"
       :class="{ 'is-active': menu === true }"
-      class="group mt-10 flex justify-center md:hidden text-charcoal">
+      class="group flex justify-center md:hidden">
       <span x-show="menu === false">
         {{ partial:icons/burger class="w-24 h-auto" }}
       </span>
@@ -21,7 +21,7 @@
     <a 
       href="/"
       title="Startseite">
-      {{ partial:icons/logo class="block w-80 md:w-125 h-auto" }}
+      {{ partial:icons/logo class="block h-30 md:h-40 xl:h-50 w-auto" }}
     </a>
   </div>
 </header>
