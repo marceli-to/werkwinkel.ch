@@ -8,7 +8,7 @@ const initMap = () => {
   var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/marcelitoooo/ck16ms7m51nlo1cmwnqrbjuyq?optimize=true',
-      center: [8.800421251412802,47.259044044851066], 
+      center: [8.79958356703086, 47.258948004965205],
       zoom: zoom
   });
   map.addControl(new mapboxgl.NavigationControl());
@@ -20,7 +20,7 @@ const initMap = () => {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [8.800421251412802,47.259044044851066]
+        coordinates: [8.79958356703086, 47.258948004965205]
       },
       properties: {
         title: 'Werkwinkel',
