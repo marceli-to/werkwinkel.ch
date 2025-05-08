@@ -31,15 +31,22 @@ const initMap = () => {
 
   // add markers to map
   geojson.features.forEach(function(marker) {
-
-  // create a HTML element for each feature
-  var el = document.createElement('div');
-  el.className = 'marker';
-
-  // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el)
-    .setLngLat(marker.geometry.coordinates)
-    .addTo(map);
+    // create a HTML element for each feature
+    var el = document.createElement('div');
+    el.className = 'marker';
+  
+    // create the popup
+    var popup = new mapboxgl.Popup({ offset: 25, className: "mapboxgl-popup" })
+      .setHTML('<h3>Lochrütistrasse 12<br>8633 Wolfhausen ZH</h3>');
+  
+    // make a marker and attach the popup
+    new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .setPopup(popup)
+      .addTo(map);
+  
+    // open the popup immediately
+    popup.addTo(map);
   });
 };
 

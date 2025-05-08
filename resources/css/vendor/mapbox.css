@@ -598,3 +598,20 @@ a.mapboxgl-ctrl-logo.mapboxgl-compact {
       display: none;
   }
 }
+
+
+.mapboxgl-popup-close-button {
+  @apply !hidden
+}
+
+.mapboxgl-popup-content {
+  @apply text-white
+}
+
+.mapboxgl-popup .mapboxgl-popup-content {
+  @apply !bg-beige
+}
+
+.mapboxgl-popup .mapboxgl-popup-tip {
+  @apply border-t-transparent border-b-transparent
+}
