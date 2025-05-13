@@ -5,12 +5,10 @@ const initMap = () => {
 
   const zoom = document.getElementById('map').dataset.zoom;
 
-  const latLong = '8.29285128631892, 47.448015724736244';
-
   const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/marcelitoooo/ck16ms7m51nlo1cmwnqrbjuyq?optimize=true',
-    center: [latLong],
+    center: [8.29285128631892, 47.448015724736244],
     zoom: zoom
   });
   map.addControl(new mapboxgl.NavigationControl());
@@ -22,7 +20,7 @@ const initMap = () => {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [latLong]
+        coordinates: [8.29285128631892, 47.448015724736244]
       },
       properties: {
         title: 'Werkwinkel',
