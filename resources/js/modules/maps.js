@@ -5,22 +5,24 @@ const initMap = () => {
 
   const zoom = document.getElementById('map').dataset.zoom;
 
-  var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/marcelitoooo/ck16ms7m51nlo1cmwnqrbjuyq?optimize=true',
-      center: [8.79958356703086, 47.258948004965205],
-      zoom: zoom
+  const latLong = '8.29285128631892, 47.448015724736244';
+
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/marcelitoooo/ck16ms7m51nlo1cmwnqrbjuyq?optimize=true',
+    center: [latLong],
+    zoom: zoom
   });
   map.addControl(new mapboxgl.NavigationControl());
   map.scrollZoom.disable();
 
-  var geojson = {
+  const geojson = {
     type: 'FeatureCollection',
     features: [{
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [8.79958356703086, 47.258948004965205]
+        coordinates: [latLong]
       },
       properties: {
         title: 'Werkwinkel',
@@ -32,21 +34,13 @@ const initMap = () => {
   // add markers to map
   geojson.features.forEach(function(marker) {
     // create a HTML element for each feature
-    var el = document.createElement('div');
+    const el = document.createElement('div');
     el.className = 'marker';
-  
-    // create the popup
-    var popup = new mapboxgl.Popup({ offset: 25, className: "mapboxgl-popup" })
-      .setHTML('<h3>Lochrütistrasse 12<br>8633 Wolfhausen ZH</h3>');
   
     // make a marker and attach the popup
     new mapboxgl.Marker(el)
       .setLngLat(marker.geometry.coordinates)
-      .setPopup(popup)
       .addTo(map);
-  
-    // open the popup immediately
-    popup.addTo(map);
   });
 };
 
