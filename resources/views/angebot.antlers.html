@@ -7,13 +7,7 @@
     height="460" }}
 
   {{ partial:layout/inner class="relative" }}
-    <a 
-      href="https://werkwinkel.designraum.ch" 
-      title="3D-Ansicht"
-      target="_blank"
-      class="block absolute top-0 -translate-y-[70%] md:-translate-y-1/2 right-15 lg:right-50 size-90 md:size-154 lg:size-174 hover:-rotate-6 transition-all">
-      {{ partial:icons/splash-3d class="block w-full h-auto" }}
-    </a>
+
 
     <h1>
       Sie haben die Idee – <br>
@@ -25,48 +19,10 @@
       <p>Im Erdgeschoss steht ein hochwertig ausgebauter Aufenthaltsraum mit integrierter Gemeinschaftsküche zur Verfügung, der als Begegnungs- und Pausenraum genutzt werden kann. Ergänzt wird die Infrastruktur durch ein grosszügiges Parkplatzangebot sowie einen überdachten Velounterstand.</p>
     {{ /partial:layout/article }}
 
+
     <div class="mt-25 lg:mt-35 max-w-3xl">
-      <a 
-        href="https://werkwinkel.designraum.ch" 
-        title="3D-Ansicht"
-        target="_blank"
-        class="relative group">
-        <span class="absolute inset-0 bg-beige/60 group-hover:bg-transparent transition-all uppercase font-extrabold text-white p-10 lg:p-20 text-md md:text-lg lg:text-xl leading-[1.1]">
-          3D-Ansicht
-        </span>
-        {{ partial:icons/link-external class="absolute top-1/2 -translate-y-1/2 right-1/2 -translate-x-1/2 text-white" }}
-        {{ partial:components/media/image 
-          image="werkwinkel-3d-ansicht" 
-          alt="Werkwinkel" 
-          width="900" 
-          height="662" }}
-      </a>
-    </div>
-
-    <div class="w-full flex flex-col gap-y-15 sm:flex-row sm:gap-y-0 sm:gap-x-10 md:gap-x-15 lg:gap-x-20 mt-25 lg:mt-35">
-      <div class="bg-beige text-white w-full p-10 lg:p-15">
-        <h3 class="mb-5">Infrastruktur</h3>
-        <ul>
-          <li>Attraktiver, offener Grundriss mit ausgebauter Teeküche, helle Räumlichkeiten</li>
-          <li>hochwertige Materialisierung im Grundausbau (Boden Parkett, Wände Abrieb, Decke Beton roh, Fensterfront mit 3-fach Isolierverglasung, Lamellenstoren elektronisch bedienbar)</li>
-          <li>Innovativer Standort mit nachhaltiger, energieschonender Bauweise</li>
-        </ul>
-      </div>
-      <div class="bg-almond text-black w-full p-10 lg:p-15">
-        <h3 class="mb-5 text-beige">Zahlen und Fakten</h3>
-        <ul>
-          <li>Nutzlast bis zu 2’500kg/m²</li>
-          <li>8.30 m Deckenhöhe vom Boden bis zur konstruktiven Deckenhöhe, davon unterteilbar mittels Einlageböden auf bis zu 3 Ebenen</li>
-          <li>Möglichkeit für Installation einer Krananlage</li>
-          <li>Direkte Zugangsmöglichkeiten zu Bürotrakt</li>
-          <li>Grundinstallation Sanitär</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="mt-25 lg:mt-35">
       <h3 class="text-beige">Objektübersicht</h3>
-      <table class="w-full max-w-2xl mt-10 lg:mt-15 text-sm md:text-base">
+      <table class="w-full mt-10 lg:mt-15 text-sm md:text-base">
         <thead class="border-b border-black">
           <th class="text-left md:pr-20">
             <span class="block sm:hidden">Nummer</span>
@@ -99,8 +55,9 @@
                   <a 
                     href="/assets/downloads/werkwinkel-grundrisse-{{ number | lower }}.pdf"
                     target="_blank"
-                    title="Download Grundrisse">
-                    <span class="font-bold">&darr;</span>
+                    title="Download Grundrisse"
+                    class="group">
+                    <span class="inline-block font-bold bg-beige px-5 text-white relative">&darr;</span>
                   </a>
                 </td>
                 <td class="text-right">
@@ -127,6 +84,47 @@
       </table>
       <p class="text-sm mt-10 lg:mt-20">Preise auf Anfrage</p>
     </div>
+
+    <div class="mt-25 lg:mt-35 w-full flex flex-col gap-y-15 sm:flex-row sm:gap-y-0 sm:gap-x-10 md:gap-x-15 lg:gap-x-20 mt-25 lg:mt-35">
+      <div class="bg-beige text-white w-full p-10 lg:p-15">
+        <h3 class="mb-5">Infrastruktur</h3>
+        <ul>
+          <li>Attraktiver, offener Grundriss mit ausgebauter Teeküche, helle Räumlichkeiten</li>
+          <li>hochwertige Materialisierung im Grundausbau (Boden Parkett, Wände Abrieb, Decke Beton roh, Fensterfront mit 3-fach Isolierverglasung, Lamellenstoren elektronisch bedienbar)</li>
+          <li>Innovativer Standort mit nachhaltiger, energieschonender Bauweise</li>
+        </ul>
+      </div>
+      <div class="bg-almond text-black w-full p-10 lg:p-15">
+        <h3 class="mb-5 text-beige">Zahlen und Fakten</h3>
+        <ul>
+          <li>Nutzlast bis zu 2’500kg/m²</li>
+          <li>8.30 m Deckenhöhe vom Boden bis zur konstruktiven Deckenhöhe, davon unterteilbar mittels Einlageböden auf bis zu 3 Ebenen</li>
+          <li>Möglichkeit für Installation einer Krananlage</li>
+          <li>Direkte Zugangsmöglichkeiten zu Bürotrakt</li>
+          <li>Grundinstallation Sanitär</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-25 lg:mt-35 max-w-3xl">
+      <a 
+        href="https://werkwinkel.designraum.ch" 
+        title="3D-Rundgang"
+        target="_blank"
+        class="relative group">
+        <span class="absolute inset-0 bg-beige/60 group-hover:bg-transparent transition-all uppercase font-extrabold text-white p-10 lg:p-20 text-md md:text-lg lg:text-xl leading-[1.1]">
+          3D-Rundgang
+        </span>
+        {{ partial:icons/link-external class="absolute top-1/2 -translate-y-1/2 right-1/2 -translate-x-1/2 text-white" }}
+        {{ partial:components/media/image 
+          image="werkwinkel-3d-ansicht" 
+          alt="Werkwinkel" 
+          width="900" 
+          height="662" }}
+      </a>
+    </div>
+
+
 
 
   {{ /partial:layout/inner }}
