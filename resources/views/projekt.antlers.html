@@ -26,13 +26,25 @@
         </a>
       </div>
 
-      {{ partial:components/media/image 
-        image="werkwinkel-installation" 
-        alt="Werkwinkel Installation" 
-        width="1280" 
-        height="419" }}
-
     {{ /partial:layout/article }}
+
+    <div class="mt-25 lg:mt-45 mb-15 lg:mb-20 grid grid-cols-2 gap-x-10 md:gap-x-15 lg:gap-x-20">
+      {{ partial:components/media/image 
+        image="werkwinkel-gewerbehalle-innen" 
+        alt="Werkwinkel" 
+        width="1024" 
+        height="460"
+        class="!h-full !object-cover" }}
+
+      {{ partial:components/media/image 
+        image="werkwinkel-wolfhausen-innen-3" 
+        alt="Werkwinkel" 
+        width="1024" 
+        height="460"
+        class="!h-full !object-cover" }}
+    </div>
+
+
 
   {{ /partial:layout/inner }}
 
